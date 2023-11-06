@@ -9,7 +9,6 @@ namespace App\Http\Resources;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 use App\Http\Resources\AuthorResource;
-use App\Http\Resources\BookReviewResource;
 
 class BookResource extends JsonResource
 {
