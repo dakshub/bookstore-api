@@ -28,9 +28,9 @@ class BooksReviewController extends Controller
         }
 
         $bookReview = new BookReview();
-        $input_data = $request->all();
-        $bookReview->comment = $input_data['comment'];
-        $bookReview->review = $input_data['review'];
+        $requestData = $request->all();
+        $bookReview->comment = $requestData['comment'];
+        $bookReview->review = $requestData['review'];
         $bookReview->user_id = Auth::id();
         $bookReview->book_id = $bookId;
         $bookReview->save();

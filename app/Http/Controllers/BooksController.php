@@ -25,13 +25,13 @@ class BooksController extends Controller
     public function store(PostBookRequest $request)
     {
         $book = new Book();
-        $input_data = $request->all();
-        $book->title = $input_data['title'];
-        $book->isbn = $input_data['isbn'];
-        $book->published_year = $input_data['published_year'];
-        $book->description = $input_data['description'];
+        $requestData = $request->all();
+        $book->title = $requestData['title'];
+        $book->isbn = $requestData['isbn'];
+        $book->published_year = $requestData['published_year'];
+        $book->description = $requestData['description'];
         $book->save();
-        $book->authors()->attach($input_data['authors']);
+        $book->authors()->attach($requestData['authors']);
 
         return new BookResource($book);
     }
