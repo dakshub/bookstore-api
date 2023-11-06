@@ -32,8 +32,8 @@ class Book extends Model
         if (isset($filters['authors'])) {
             $authors = (strpos($filters['authors'], ',') !== false) ?
                 explode(',', $filters['authors']) : [$filters['authors']];
-            $query->whereHas('authors', function ($authorsQuery) use ($authors) {
-                $authorsQuery->whereIn('author_id', $authors);
+            $query->whereHas('authors', function ($authorQuery) use ($authors) {
+                $authorQuery->whereIn('author_id', $authors);
             });
         }
 
