@@ -3,6 +3,8 @@
 A bookstore application with web API methods.\
 The project contains 50 functional tests and 100% code coverage.
 
+<img width="572" alt="Screenshot 2023-11-05 at 11 09 51 PM" src="https://github.com/dakshub/bookstore-api/assets/45903885/aa80c3cf-d619-41a0-bf83-430ec7760391">
+
 ### Setup
 
 ```
