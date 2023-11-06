@@ -13,3 +13,4 @@
 
 Route::get('/books', 'BooksController@index');
 Route::post('/books', 'BooksController@store');
+Route::post('/books/{id}/reviews', 'BooksReviewController@store');
